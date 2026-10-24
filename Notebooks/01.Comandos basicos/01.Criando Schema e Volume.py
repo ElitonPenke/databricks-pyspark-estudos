@@ -1,17 +1,8 @@
 # Databricks notebook source
-
-"""
-Catalog
-│
-├── Schema
-│   │
-│   ├── Tabela
-│   └── Volume
-
-"""
-
-# COMMAND ----------
-
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC Create catalogs:https://learn.microsoft.com/en-us/azure/databricks/catalogs/create-catalog
 # MAGIC
@@ -40,23 +31,8 @@ spark.sql("CREATE CATALOG IF NOT EXISTS example;")
 # COMMAND ----------
 
 # deletar catalog
-spark.sql("drop CATALOG if exists example cascade;")
+spark.sql("drop CATALOG if exists example cascade;") #cascade é para deletar tudo dentro do catalogo, visto que se não tiver, dá erro pelo fato de ter tabelas dentro
 spark.sql("drop CATALOG if exists example2 cascade;")
-
-# COMMAND ----------
-
-########## criar 
-#criar catalog
-#criar schema
-#criar tabela
-#criar volume
-
-#### deletar 
-
-#drop table
-#drop volume
-#drop schema
-#drop catalog
 
 # COMMAND ----------
 
@@ -120,7 +96,3 @@ spark.sql("CREATE SCHEMA IF NOT EXISTS curso_databricks.aula")
 spark.sql("""
 CREATE VOLUME IF NOT EXISTS curso_databricks.aula.aula_volume
 """)
-
-
-# COMMAND ----------
-

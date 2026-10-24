@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # DBTITLE 1,Formatos de Arquivos em Big Data
 # MAGIC %md
 # MAGIC # Diferentes Tipos de Arquivos no Spark

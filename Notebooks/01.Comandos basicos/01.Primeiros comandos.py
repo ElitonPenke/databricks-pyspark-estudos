@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC ##### DBFS e dbutils Documentação 
 # MAGIC
@@ -50,9 +54,6 @@ display(dbutils.fs.ls("/Volumes/curso_databricks/aula/aula_volume/Bike Store/"))
 
 df_teste=spark.read.csv("dbfs:/Volumes/curso_databricks/aula/aula_volume/Bike Store/categories.csv", header=True, inferSchema=True)
 df_teste.show()
-
-
-
 
 # COMMAND ----------
 
